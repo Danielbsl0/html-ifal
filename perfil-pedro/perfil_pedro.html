@@ -59,7 +59,6 @@
       }
 
       #conteudo img#perfil {
-        /*Colocando a imagem na parte de cima do #conteudo usando flexbox */
         justify-self: flex-start;
         height: 120px;
         border-radius: 50%;
@@ -68,7 +67,7 @@
 
       section > p {
         text-align: justify;
-        margin: 0px 10px;
+        margin: 10px;
         text-indent: 2em;
       }
 
@@ -91,21 +90,34 @@
         text-shadow: rgba(0, 0, 0, 0.238) 2px 2px 5px;
       }
 
-      /* Em planejamento
-      ul > li > a:hover {
-        
-        color: rgba(255, 0, 0, 0.885);
-      } */
-
       ul > li > a > img {
         width: 15px;
         margin-right: 5px;
         margin-bottom: -3px;
       }
+      /* Tablet */
+      @media screen and ((min-width: 850px) and (max-width: 1199px)) {
+        body {
+          font-size: 1.2em;
+        }
 
-      /*Configurações de item flexul#rodape > li {
-        
-      }*/
+        img#perfil {
+          /* Aumentar tamanho da imagem */
+          transform: scale(1.2);
+          margin-top: 20px;
+        }
+      }
+      /* Desktop */
+      @media screen and (min-width: 1200px) {
+        body {
+          font-size: 1.4em;
+        }
+
+        img#perfil {
+          transform: scale(1.4);
+          margin-top: 40px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -119,8 +131,8 @@
         <tr style="height: 500px">
           <td style="width: 10%">
             <ul id="menu">
-              <li><a href="#">Perfil do <br> Daniel</a></li>
-              <li><a href="#">Perfil do <br> Pedro</a></li>
+              <li><a href="perfil_pedro.html">Perfil do <br> Daniel</a></li>
+              <li><a href="../perfil-daniel/perfil_daniel.html">Perfil do <br> Pedro</a></li>
               <li><a href="#">Piratas do <br> Caribe</a></li>
               <li><a href="#">Vídeo <br> Games</a></li>
             </ul>
@@ -130,10 +142,10 @@
             <img id="perfil" src="img/fotoPerfil.jpeg" alt="Foto Pedro" />
             <section>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, accusantium id unde quae minus mollitia iusto laudantium omnis aperiam quam veritatis officiis non, hic quo! Non maxime deleniti quasi voluptatum.
+                Aluno do IFAL - Campus Palmeira dos Índios. Cursando o 3° ano de Informática. Estou interessado em desenvolvimento de software, e estou aprendendo HTML5, CSS3 e C# para desenvolvimento de aplicações tanto web quanto mobile.
               </p>
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam minima perferendis corrupti quae consequuntur quod, cupiditate asperiores nobis consectetur aperiam modi maiores commodi maxime obcaecati fugit qui ullam eius repellat!
+                .
               </p>
             </section>
           </td>
