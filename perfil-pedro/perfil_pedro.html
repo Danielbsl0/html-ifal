@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      h1 {
+        font-size: 1.5em;
+      }
+
+      h2 {
+        font-size: 1.2em;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: separate;
+      }
+
+      table {
+        width: 60%;
+        margin: 0 auto;
+        background-color: white;
+      }
+
+      th,
+      td {
+        text-align: center;
+      }
+
+      td > ul#menu {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: center;
+        height: 500px;
+        padding: 5px 0px 5px 0px;
+      }
+
+      #conteudo {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        padding: 5px;
+        height: 500px;
+      }
+
+      #conteudo img#perfil {
+        justify-self: flex-start;
+        height: 120px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+      }
+
+      section > p {
+        text-align: justify;
+        margin: 10px;
+        text-indent: 2em;
+      }
+
+      ul#rodape {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        padding: 5px;
+      }
+
+      ul > li {
+        list-style: none;
+      }
+
+      ul > li > a {
+        font-size: 0.7em;
+        text-decoration: none;
+        /* Em planejamento
+        color: rgba(179, 98, 183, 0.885); */
+        text-shadow: rgba(0, 0, 0, 0.238) 2px 2px 5px;
+      }
+
+      ul > li > a > img {
+        width: 15px;
+        margin-right: 5px;
+        margin-bottom: -3px;
+      }
+      /* Tablet */
+      @media screen and ((min-width: 850px) and (max-width: 1199px)) {
+        body {
+          font-size: 1.2em;
+        }
+
+        img#perfil {
+          /* Aumentar tamanho da imagem */
+          transform: scale(1.2);
+          margin-top: 20px;
+        }
+      }
+      /* Desktop */
+      @media screen and (min-width: 1200px) {
+        body {
+          font-size: 1.4em;
+        }
+
+        img#perfil {
+          transform: scale(1.4);
+          margin-top: 40px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <header>
+        <tr style="height: 100px">
+          <th colspan="2"><h1>Site Tabela</h1></th>
+        </tr>
+      </header>
+      <main>
+        <tr style="height: 500px">
+          <td style="width: 10%">
+            <ul id="menu">
+              <li><a href="../perfil-daniel/perfil_daniel.html">Perfil do <br> Daniel</a></li>
+              <li><a href="perfil_pedro.html">Perfil do <br> Pedro</a></li>
+              <li><a href="../pirates_caribe/pirates_caribe.html">Piratas do <br> Caribe</a></li>
+              <li><a href="#">Vídeo <br> Games</a></li>
+            </ul>
+          </td>
+          <td id="conteudo">
+            <h2>Perfil do Pedro</h2>
+            <img id="perfil" src="img/fotoPerfil.jpeg" alt="Foto Pedro" />
+            <section>
+              <p>
+                Aluno do IFAL - Campus Palmeira dos Índios. Cursando o 3° ano de Informática. Estou interessado em desenvolvimento de software, e estou aprendendo HTML5, CSS3 e C# para desenvolvimento de aplicações tanto web quanto mobile.
+              </p>
+              <p>
+                Sou um homem que gosta de aprender coisas novas e que gosta de trabalhar com programação. Estou sempre buscando novos conhecimentos e aprender coisas novas.
+              </p>
+            </section>
+          </td>
+        </tr>
+      </main>
+      <footer>
+        <tr style="height: 75px">
+          <th colspan="2" id="rodape">
+            <h2>Redes Sociais</h2>
+            <ul id="rodape">
+              <li><a href="https://github.com/Danielbsl0"><img src="img/github-icon.jpeg" alt="Foto GitHub">Danielbsl0</a></li>
+              <li><a href="https://www.instagram.com/o_dani3l"><img src="img/instagram-icon.jpeg" alt="Foto Instagram">o_dan3l</a></li>
+              <li><a href="https://github.com/pwellinsson"><img src="img/github-icon.jpeg" alt="Foto GitHub">pwellinsson</a></li>
+              <li><a href="https://www.instagram.com/pedro_wellinsson"><img src="img/instagram-icon.jpeg" alt="Foto Instagram">Wellinsson</a></li>
+            </ul>
+          </th>
+        </tr>
+      </footer>
+    </table>
+  </body>
+</html
