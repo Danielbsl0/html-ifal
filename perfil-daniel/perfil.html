@@ -21,13 +21,14 @@
 
       h2 {
         font-size: 1.2em;
+        text-align: left;
       }
 
       table,
       th,
       td {
         border: 1px solid black;
-        border-collapse: separate;
+        border-collapse: collapse;
       }
 
       table {
@@ -41,13 +42,13 @@
         text-align: center;
       }
 
-      /* ul#menu {
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-between;
-        align-items: center;
-        padding: 5px;
-      } */
+      p{
+        text-align: justify;
+        text-indent: 10px;
+        font-size: 0.9em;
+      }
+      
+
 
       td > ul#menu {
         display: flex;
@@ -57,7 +58,7 @@
         height: 500px;
         padding: 5px 0px 5px 0px;
       }
-
+      
       ul#rodape {
         display: flex;
         flex-flow: row nowrap;
@@ -72,16 +73,8 @@
       ul > li > a {
         font-size: 0.7em;
         text-decoration: none;
-        /* Em planejamento
-        color: rgba(179, 98, 183, 0.885); */
         text-shadow: rgba(0, 0, 0, 0.238) 2px 2px 5px;
       }
-
-      /* Em planejamento
-      ul > li > a:hover {
-        
-        color: rgba(255, 0, 0, 0.885);
-      } */
 
       ul > li > a > img {
         width: 15px;
@@ -89,9 +82,10 @@
         margin-bottom: -3px;
       }
 
-      /*Configurações de item flexul#rodape > li {
-        
-      }*/
+
+
+      
+
     </style>
   </head>
   <body>
@@ -102,16 +96,29 @@
         </tr>
       </header>
       <main>
-        <tr style="height: 500px">
+        <tr style="height: 50px">
           <td style="width: 10%">
             <ul id="menu">
               <li><a href="#">Perfil do <br> Daniel</a></li>
               <li><a href="#">Perfil do <br> Pedro</a></li>
               <li><a href="#">Piratas do <br> Caribe</a></li>
-              <li><a href="#">Devil May Cry </a></li>
+              <li><a href="#">Devil May Cry 3</a></li> 
             </ul>
           </td>
-          <td style="width: 90%">PRINCIPAL</td>
+          <td style="width: 90%">
+            <table style="width: 100%;" id="conteudo">
+                <th>Perfil Daniel</th>
+                <tr style="height: 500px;">
+                <td><h2>Quem sou eu?</h2>
+                    <p>Oi! Eu sou o Daniel Barbosa Leite Silva, nascido em 5 de novembro de 2007, em Arapiraca, Alagoas. Atualmente estou cursando o 3° ano do curso técnico de Informática no IFAL (Instituto Federal de Alagoas), onde estou me aprofundando no universo da tecnologia e da programação, duas áreas pelas quais sou completamente apaixonado. Meu grande objetivo é transformar essa paixão em carreira, conquistando futuramente uma vaga de emprego na área de desenvolvimento de software ou tecnologia da informação</p>
+                    <p>Desde pequeno sempre fui fascinado por aprender coisas novas, e isso só cresceu com o tempo. Sou movido pela curiosidade e pela vontade de dominar novas tecnologias, explorar linguagens de programação diferentes e entender como o mundo digital funciona por dentro. Além da tecnologia, tenho grandes paixões que fazem parte do meu dia a dia: sou fã de RPG de Mesa, animes e, acima de tudo, videogames.</p></td>
+                    <td><img src="img/perfil-daniel.png" alt="" width="200"></td>
+                </tr>
+                
+            </table>
+
+
+          </td>
         </tr>
       </main>
       <footer>
