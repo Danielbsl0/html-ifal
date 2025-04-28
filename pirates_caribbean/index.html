@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Perfil</title>
+    <title>Piratas do Caribe</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <style>
       * {
@@ -13,7 +13,6 @@
 
       body {
         font-family: Arial, Helvetica, sans-serif;
-        background-color: #101828;
       }
 
       h1 {
@@ -22,6 +21,11 @@
 
       h2 {
         font-size: 1.2em;
+      }
+
+      h3 {
+        font-size: 1em;
+        margin: 10px;
       }
 
       table,
@@ -42,14 +46,6 @@
         text-align: center;
       }
 
-      /* ul#menu {
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-between;
-        align-items: center;
-        padding: 5px;
-      } */
-
       td > ul#menu {
         display: flex;
         flex-flow: column nowrap;
@@ -57,6 +53,37 @@
         align-items: center;
         height: 500px;
         padding: 5px 0px 5px 0px;
+      }
+
+      #conteudo {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        padding: 5px;
+        height: 500px;
+      }
+
+      section > p {
+        text-align: justify;
+        margin: 10px;
+        text-indent: 2em;
+      }
+
+      section > h3 {
+        text-align: left;
+      }
+
+      ul#pers {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+      }
+
+      #conteudo img#caribe {
+        height: 100px;
+        border-radius: 30%;
+        margin-top: 5px;
+        margin-bottom: 20px;
       }
 
       ul#rodape {
@@ -78,26 +105,29 @@
         text-shadow: rgba(0, 0, 0, 0.238) 2px 2px 5px;
       }
 
-      /* Em planejamento
-      ul > li > a:hover {
-        
-        color: rgba(255, 0, 0, 0.885);
-      } */
-
       ul > li > a > img {
         width: 15px;
         margin-right: 5px;
         margin-bottom: -3px;
       }
 
-      /*Configurações de item flexul#rodape > li {
-        
-      }*/
-
-        /* Tablet */
+      @media screen and (min-width: 850px) {
+        ul#pers {
+        flex-flow: row nowrap;
+        padding: 8px;
+      }
+      }
+      
+      /* Tablet */
       @media screen and ((min-width: 850px) and (max-width: 1199px)) {
         body {
           font-size: 1.2em;
+        }
+
+        img#caribe {
+          /* Aumentar tamanho da imagem */
+          transform: scale(1.2);
+          margin-top: 20px;
         }
       }
       /* Desktop */
@@ -105,16 +135,11 @@
         body {
           font-size: 1.4em;
         }
-      }
 
-      img#perfil{
-        margin-top: 20px;
-      }
-
-      p{
-       text-align: justify;
-       text-indent: 1em;
-       margin: 10px;
+        img#caribe {
+          transform: scale(1.3);
+          margin-top: 40px;
+        }
       }
     </style>
   </head>
@@ -129,17 +154,35 @@
         <tr style="height: 500px">
           <td style="width: 10%">
             <ul id="menu">
-              <li><a href="#">Perfil do <br> Daniel</a></li>
-              <li><a href="#">Perfil do <br> Pedro</a></li>
-              <li><a href="#">Piratas do <br> Caribe</a></li>
-              <li><a href="#">Devil May Cry </a></li>
+              <li><a href="../perfil-daniel/perfil_daniel.html">Perfil do <br> Daniel</a></li>
+              <li><a href="../perfil-pedro/perfil_pedro.html">Perfil do <br> Pedro</a></li>
+              <li><a href="pirates_caribe.html">Piratas do <br> Caribe</a></li>
+              <li><a href="#">Vídeo <br> Games</a></li>
             </ul>
           </td>
-          <td style="width: 90%">
-            <h2>Perfil Daniel</h2>
-            <img src="img/perfil-daniel.png" alt="" height="150" id="perfil">
-            <p>Eu sou o Daniel Barbosa Leite Silva, nascido em 5 de novembro de 2007, em Arapiraca, Alagoas. Atualmente estou cursando o 3° ano do curso técnico de Informática no IFAL (Instituto Federal de Alagoas), onde estou me aprofundando no universo da tecnologia e da programação, duas áreas pelas quais sou completamente apaixonado.Tenho conhecimento nas áreas em Python, C e C++, além de estar apreendendo as seguintes tenologias de desenvolvimento: HTML, CSS e Javascript e C#
-            </p>
+          <td id="conteudo">
+            <h2>Piratas do Caribe</h2>
+            <section>
+              <h3>História</h3>
+              <p>
+                A série se passa em um mundo fictício, e gira em torno das aventuras do Capitão Jack Sparrow.
+              </p>
+              <p>
+                As histórias são divertidas e emocionantes e são uma ótima forma de passar o tempo com amigos.
+              </p>
+            </section>
+            <section>
+              <h3>Personagens</h3>
+              <p>
+                Os personagens mais importantes para a trama que a História tem foco são:
+                <ul id="pers">
+                  <li><pre>Jack Sparrow</pre></li>
+                  <li><pre>Will Turner</pre></li>
+                  <li><pre>Elizabeth Swann</pre></li>
+                </ul>
+              </p>
+            </section>
+            <img id="caribe" src="img/foto_piratas.jpg" alt="Imagem Piratas do Caribe">
           </td>
         </tr>
       </main>
