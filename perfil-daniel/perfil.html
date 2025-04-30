@@ -51,27 +51,6 @@
         padding: 5px 0px 5px 0px;
       }
 
-      #conteudo {
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-        padding: 5px;
-        height: 500px;
-      }
-
-      #conteudo img#perfil {
-        justify-self: flex-start;
-        height: 120px;
-        border-radius: 50%;
-        margin-bottom: 20px;
-      }
-
-      section > p {
-        text-align: justify;
-        margin: 10px;
-        text-indent: 2em;
-      }
-
       ul#rodape {
         display: flex;
         flex-flow: row nowrap;
@@ -90,22 +69,16 @@
         color: rgba(179, 98, 183, 0.885); */
         text-shadow: rgba(0, 0, 0, 0.238) 2px 2px 5px;
       }
-
       ul > li > a > img {
         width: 15px;
         margin-right: 5px;
         margin-bottom: -3px;
       }
-      /* Tablet */
+
+        /* Tablet */
       @media screen and ((min-width: 850px) and (max-width: 1199px)) {
         body {
           font-size: 1.2em;
-        }
-
-        img#perfil {
-          /* Aumentar tamanho da imagem */
-          transform: scale(1.2);
-          margin-top: 20px;
         }
       }
       /* Desktop */
@@ -113,11 +86,16 @@
         body {
           font-size: 1.4em;
         }
+      }
 
-        img#perfil {
-          transform: scale(1.4);
-          margin-top: 40px;
-        }
+      img#perfil{
+        margin-top: 20px;
+      }
+
+      p{
+       text-align: justify;
+       text-indent: 1em;
+       margin: 10px;
       }
     </style>
   </head>
@@ -125,17 +103,11 @@
     <table>
       <main>
         <tr style="height: 500px">
-          <td id="conteudo">
-            <h2>Perfil do Pedro</h2>
-            <img id="perfil" src="img/fotoPerfil.jpeg" alt="Foto Pedro" />
-            <section>
-              <p>
-                Aluno do IFAL - Campus Palmeira dos Índios. Cursando o 3° ano de Informática. Estou interessado em desenvolvimento de software, e estou aprendendo HTML5, CSS3 e C# para desenvolvimento de aplicações tanto web quanto mobile.
-              </p>
-              <p>
-                Sou um homem que gosta de aprender coisas novas e que gosta de trabalhar com programação. Estou sempre buscando novos conhecimentos e aprender coisas novas.
-              </p>
-            </section>
+          <td style="width: 90%">
+            <h2>Perfil Daniel</h2>
+            <img src="img/perfil-daniel.png" alt="" height="150" id="perfil">
+            <p>Eu sou o Daniel Barbosa Leite Silva, nascido em 5 de novembro de 2007, em Arapiraca, Alagoas. Atualmente estou cursando o 3° ano do curso técnico de Informática no IFAL (Instituto Federal de Alagoas), onde estou me aprofundando no universo da tecnologia e da programação, duas áreas pelas quais sou completamente apaixonado.Tenho conhecimento nas áreas em Python, C e C++, além de estar apreendendo as seguintes tenologias de desenvolvimento: HTML, CSS e Javascript e C#
+            </p>
           </td>
         </tr>
       </main>
