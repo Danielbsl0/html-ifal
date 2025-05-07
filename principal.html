@@ -14,6 +14,8 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
             font-size: 0.8em;
+            color: white;
+            background-color: black;
         }
 
         h1 {
@@ -32,35 +34,26 @@
             line-height: 1.3em;
         }
 
-        #container {
-            display: grid;
-            /* grid-template-columns: 45% 45%; */
-            grid-template-columns: repeat(2, auto);
-            grid-template-rows: repeat(2, 55%);
-            justify-content: space-around;
-            align-items: end;
-            /* gap: 70px 30px; */
-            /* grid-column-gap: 0px;
-            grid-row-gap: 0px;
-            padding: 10px; */
-        }
-        
-        #container{
+        div{
             text-align: center;
         }
 
-        #container p {
+        div p {
             text-indent: 0.3em;
             text-align: center;
+            
         }
 
-        #container > section > img {
+        div > img {
             height: 80px;
         }
 
-        section.perfil > img {
-            height: 80px;
+        div.perfil > img {
             border-radius: 50%;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: auto auto;
         }
 
         @media screen and (min-width: 850px) and (max-width: 1199px) {
@@ -80,41 +73,29 @@
     <h1>PÁGINA INICIAL</h1>
     <p>Seja bem vindo a página inicial do nosso site! Aqui você pode acessar os demais conteúdos do nosso site através do menu localizado à esquerda!</p>
     <h2>O que você verá no nosso site: </h2>
-    <div id="container">
-        <section class="perfil">
-            <h3>Perfil do Daniel</h3>
-            <p>Breve resumo sobre o autor do site.</p>
-            <img src="perfil-daniel/img/perfil-daniel.png" alt="Foto do Daniel">
-        </section>
-        <section class="perfil">
-            <h3>Perfil do Pedro</h3>
-            <p>Breve resumo sobre o autor do site.</p>
-            <img src="perfil-pedro/img/fotoPerfil.jpeg" alt="Foto do Pedro">
-        </section>
-        <section>
-            <h3>Devil May Cry</h3>
-            <p>Breve resumo sobre o jogo.</p>
-            <img src="dmc-daniel/img/dmc.jpeg" alt="Imagem de Devil May Cry">
-        </section>
-        <section>
-            <h3>Piratas do Caribe</h3>
-            <p>Breve resumo sobre o filme.</p>
-            <img src="pirates_caribbean/img/foto_piratas.jpg" alt="Imagem Piratas do Caribe">
-        </section>
-    </div>
-    <!-- <table>
-        <tr>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-        </tr>
-    </table> -->
+        
+            <div class="container">
+                <div class="perfil">
+                    <h3>Perfil do Daniel</h3>
+                    <p>Breve resumo sobre o autor do site.</p>
+                    <img src="perfil-daniel/img/perfil-daniel.png" alt="Foto do Daniel">
+                </div>
+                <div class="perfil">
+                    <h3>Perfil do Pedro</h3>
+                    <p>Breve resumo sobre o autor do site.</p>
+                    <img src="perfil-pedro/img/fotoPerfil.jpeg" alt="Foto do Pedro">
+                </div>
+                <div class="outros">
+                    <h3>Devil May Cry</h3>
+                    <p>Breve resumo sobre o jogo.</p>
+                    <img src="dmc-daniel/img/dmc.jpeg" alt="Imagem de Devil May Cry">
+                </div>
+                <div class="outros">
+                    <h3>Piratas do Caribe</h3>
+                    <p>Breve resumo sobre o filme.</p>
+                    <img src="pirates_caribbean/img/foto_piratas.jpg" alt="Imagem Piratas do Caribe">
+                </div>
+            </div>
+        
 </body>
 </html>
