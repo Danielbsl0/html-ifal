@@ -7,99 +7,91 @@
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <style>
       * {
-        margin: 0px;
-        padding: 0px;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
-
       body {
         font-family: Arial, Helvetica, sans-serif;
+        display: grid;
+        grid-template-rows: 100px 1fr 75px;
+        height: 100vh;
       }
-
-      h1 {
+      div#cabec {
+        background: white;
+        border-bottom: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      div#cabec h1 {
         font-size: 1.5em;
       }
-
-      h2 {
-        font-size: 1.2em;
+      div#princ {
+        display: grid;
+        grid-template-columns: 10% 1fr;
       }
-
-      table,
-      th,
-      td {
-        border: 1px solid black;
-        border-collapse: collapse;
+      div#menu {
+        border-right: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 5px 0;
       }
-
-      table {
-        width: 60%;
-        margin: 0 auto;
-        background-color: white;
+      div#menu ul {
+        list-style: none;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
       }
-
-      th,
-      td {
+      div#menu a {
+        text-decoration: none;
+        font-size: 0.9em;
         text-align: center;
       }
-
-      /* ul#menu {
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-between;
-        align-items: center;
-        padding: 5px;
-      } */
-
-      td > ul#menu {
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-around;
-        align-items: center;
-        height: 500px;
-        padding: 5px 0px 5px 0px;
+      .content iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
       }
-
-      ul#rodape {
+      footer {
+        background: white;
+        border-top: 1px solid black;
         display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-around;
-        padding: 5px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
       }
-
-      ul > li {
+      footer h2 {
+        font-size: 1.2em;
+        margin-bottom: 5px;
+      }
+      .socials {
+        display: flex;
+        gap: 20px;
+      }
+      .socials li {
         list-style: none;
       }
-
-      ul > li > a {
+      .socials a {
         font-size: 0.7em;
-        text-decoration: none;
-        /* Em planejamento
-        color: rgba(179, 98, 183, 0.885); */
         text-shadow: rgba(0, 0, 0, 0.238) 2px 2px 5px;
+        display: flex;
+        align-items: center;
       }
-
-      /* Em planejamento
-      ul > li > a:hover {
-        
-        color: rgba(255, 0, 0, 0.885);
-      } */
-
-      ul > li > a > img {
+      .socials img {
         width: 15px;
         margin-right: 5px;
         margin-bottom: -3px;
       }
-
-      /*Configurações de item flexul#rodape > li {
-        
-      }*/
-
-        /* Tablet */
-      @media screen and ((min-width: 850px) and (max-width: 1199px)) {
+      @media screen and (min-width: 850px) and (max-width: 1199px) {
         body {
           font-size: 1.2em;
         }
       }
-      /* Desktop */
       @media screen and (min-width: 1200px) {
         body {
           font-size: 1.4em;
@@ -108,41 +100,67 @@
     </style>
   </head>
   <body>
-    <table>
-      <header>
-        <tr style="height: 100px">
-          <th colspan="2"><h1>Site Tabela</h1></th>
-        </tr>
-      </header>
-      <main>
-        <tr style="height: 500px">
-          <td style="width: 10%">
-            <ul id="menu">
-              <li><a href="principal.html" target="principal_iframe">Página Principal</a></li>
-              <li><a href="perfil-daniel/perfil.html" target="principal_iframe">Perfil do <br> Daniel</a></li>
-              <li><a href="perfil-pedro/perfil_pedro.html" target="principal_iframe">Perfil do <br> Pedro</a></li>
-              <li><a href="pirates_caribbean/index.html" target="principal_iframe">Piratas do <br> Caribe</a></li>
-              <li><a href="dmc-daniel/dmc.html" target="principal_iframe">Devil May Cry </a></li>
-            </ul>
-          </td>
-          <td style="width: 90%">
-            <iframe src="principal.html" name="principal_iframe" height="500px" width="100%" style="border: none"></iframe>
-          </td>
-        </tr>
-      </main>
-      <footer>
-        <tr style="height: 75px">
-          <th colspan="2" id="rodape">
-            <h2>Redes Sociais</h2>
-            <ul id="rodape">
-              <li><a href="https://github.com/Danielbsl0"><img src="img/github-icon.jpeg" alt="Foto GitHub">Danielbsl0</a></li>
-              <li><a href="https://www.instagram.com/o_dani3l"><img src="img/instagram-icon.jpeg" alt="Foto Instagram">o_dan3l</a></li>
-              <li><a href="https://github.com/pwellinsson"><img src="img/github-icon.jpeg" alt="Foto GitHub">pwellinsson</a></li>
-              <li><a href="https://www.instagram.com/pedro_wellinsson"><img src="img/instagram-icon.jpeg" alt="Foto Instagram">Wellinsson</a></li>
-            </ul>
-          </th>
-        </tr>
-      </footer>
-    </table>
+    <div id="cabec">
+      <h1>Site</h1>
+    </div>
+    <div id="princ">
+      <div id="menu">
+        <ul>
+          <li>
+            <a href="principal.html" target="principal_iframe"
+              >Página Principal</a
+            >
+          </li>
+          <li>
+            <a href="perfil-daniel/perfil.html" target="principal_iframe"
+              >Perfil do Daniel</a
+            >
+          </li>
+          <li>
+            <a href="perfil-pedro/perfil_pedro.html" target="principal_iframe"
+              >Perfil do Pedro</a
+            >
+          </li>
+          <li>
+            <a href="pirates_caribbean/index.html" target="principal_iframe"
+              >Piratas do Caribe</a
+            >
+          </li>
+          <li>
+            <a href="dmc-daniel/dmc.html" target="principal_iframe"
+              >Devil May Cry</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="content">
+        <iframe src="principal.html" name="principal_iframe"></iframe>
+      </div>
+    </div>
+    <footer>
+      <h2>Redes Sociais</h2>
+      <ul class="socials">
+        <li>
+          <a href="https://github.com/Danielbsl0"
+            ><img src="img/github-icon.jpeg" alt="GitHub" />Danielbsl0</a
+          >
+        </li>
+        <li>
+          <a href="https://www.instagram.com/o_dani3l"
+            ><img src="img/instagram-icon.jpeg" alt="Instagram" />o_dani3l</a
+          >
+        </li>
+        <li>
+          <a href="https://github.com/pwellinsson"
+            ><img src="img/github-icon.jpeg" alt="GitHub" />pwellinsson</a
+          >
+        </li>
+        <li>
+          <a href="https://www.instagram.com/pedro_wellinsson"
+            ><img src="img/instagram-icon.jpeg" alt="Instagram" />Wellinsson</a
+          >
+        </li>
+      </ul>
+    </footer>
   </body>
-</html
+</html>
