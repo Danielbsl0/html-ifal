@@ -41,7 +41,7 @@
         padding: 5px 0;
       }
 
-      nav ul {
+      nav > ul {
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
@@ -52,10 +52,20 @@
         gap: 10px;
       }
 
-      nav a {
-        text-decoration: none;
+      nav > ul > li {
+        color: rgb(120, 37, 198);
         font-size: 0.9em;
         text-align: center;
+        cursor: pointer;
+      }
+
+      nav > ul > li:hover {
+        color: black;
+      }
+
+      .content > section {
+        width: 100%;
+        height: 100%;
       }
 
       .content iframe {
@@ -126,16 +136,30 @@
     <main>
       <nav>
         <ul>
-          <li><a href="principal.html" target="principal_iframe">Página Principal</a></li>
-          <li><a href="perfil-daniel/perfil.html" target="principal_iframe">Perfil do Daniel</a></li>
-          <li><a href="perfil-pedro/perfil_pedro.html" target="principal_iframe">Perfil do Pedro</a></li>
-          <li><a href="pirates_caribbean/pirates.html" target="principal_iframe">Piratas do Caribe</a></li>
-          <li><a href="dmc-daniel/dmc.html" target="principal_iframe">Devil May Cry</a></li>
+          <li><button id="principal_button" onclick="switchScreen('main')">Página Principal</button></li>
+          <li><button id="perf_daniel_button" onclick="switchScreen('perf_daniel')">Perfil do Daniel</button></li>
+          <li><button id="perf_pedro_button" onclick="switchScreen('perf_pedro')">Perfil do Pedro</button></li>
+          <li><button id="pirates_button" onclick="switchScreen('pirates')">Piratas do Caribe</button></li>
+          <li><button id="dmc_button" onclick="switchScreen('dmc')">Devil May Cry</button></li>
         </ul>
       </nav>
-      <section class="content">
-        <iframe src="perfil-pedro/perfil_pedro.html" name="principal_iframe"></iframe>
-      </section>
+      <article class="content">
+        <section id="principal">
+          <iframe src="principal.html" name="principal_iframe"></iframe>
+        </section>
+        <section id="perf_daniel" style="display: none;">
+          <iframe src="perfil-daniel/perfil.html"></iframe>
+        </section>
+        <section id="perf_pedro" style="display: none;">
+          <iframe src="perfil-pedro/perfil_pedro.html"></iframe>
+        </section>
+        <section id="pirates" style="display: none;">
+          <iframe src="pirates_caribbean/pirates.html"></iframe>
+        </section>
+        <section id="dmc" style="display: none;">
+          <iframe src="dmc-daniel/dmc.html"></iframe>
+        </section>
+      </article>
     </main>
     <footer>
       <h2>Redes Sociais</h2>
@@ -146,5 +170,7 @@
         <li><a href="https://www.instagram.com/pedro_wellinsson"><img src="img/instagram-icon.jpeg" alt="Instagram" />Wellinsson</a></li>
       </ul>
     </footer>
+
+    <script src="index.js"></script>
   </body>
 </html>
