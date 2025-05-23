@@ -19,7 +19,7 @@
         height: 100vh;
       }
 
-      div#header {
+      header {
         background: white;
         border-bottom: 1px solid black;
         display: flex;
@@ -27,21 +27,21 @@
         justify-content: center;
       }
 
-      div#header h1 {
+      header h1 {
         font-size: 1.5em;
       }
 
-      div#main {
+      main {
         display: grid;
         grid-template-columns: 10% 1fr;
       }
 
-      div#menu {
+      nav {
         border-right: 1px solid black;
         padding: 5px 0;
       }
 
-      div#menu ul {
+      nav ul {
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
@@ -51,8 +51,8 @@
         height: 100%;
         gap: 10px;
       }
-      
-      div#menu a {
+
+      nav a {
         text-decoration: none;
         font-size: 0.9em;
         text-align: center;
@@ -64,7 +64,7 @@
         border: none;
       }
 
-      div#rodape {
+      footer {
         background: white;
         border-top: 1px solid black;
         display: flex;
@@ -73,7 +73,7 @@
         justify-content: center;
       }
 
-      div#rodape h2 {
+      footer h2 {
         font-size: 1.2em;
         margin-bottom: 5px;
       }
@@ -119,66 +119,32 @@
       }
     </style>
   </head>
-    <div id="header">
+  <body>
+    <header>
       <h1>Site</h1>
-    </div>
-    <div id="main">
-      <div id="menu">
+    </header>
+    <main>
+      <nav>
         <ul>
-          <li>
-            <a href="principal.html" target="principal_iframe"
-              >Página Principal</a
-            >
-          </li>
-          <li>
-            <a href="perfil-daniel/perfil.html" target="principal_iframe"
-              >Perfil do Daniel</a
-            >
-          </li>
-          <li>
-            <a href="perfil-pedro/perfil_pedro.html" target="principal_iframe"
-              >Perfil do Pedro</a
-            >
-          </li>
-          <li>
-            <a href="pirates_caribbean/pirates.html" target="principal_iframe"
-              >Piratas do Caribe</a
-            >
-          </li>
-          <li>
-            <a href="dmc-daniel/dmc.html" target="principal_iframe"
-              >Devil May Cry</a
-            >
-          </li>
+          <li><a href="principal.html" target="principal_iframe">Página Principal</a></li>
+          <li><a href="perfil-daniel/perfil.html" target="principal_iframe">Perfil do Daniel</a></li>
+          <li><a href="perfil-pedro/perfil_pedro.html" target="principal_iframe">Perfil do Pedro</a></li>
+          <li><a href="pirates_caribbean/pirates.html" target="principal_iframe">Piratas do Caribe</a></li>
+          <li><a href="dmc-daniel/dmc.html" target="principal_iframe">Devil May Cry</a></li>
         </ul>
-      </div>
-      <div class="content">
+      </nav>
+      <section class="content">
         <iframe src="perfil-pedro/perfil_pedro.html" name="principal_iframe"></iframe>
-      </div>
-    </div>
-    <div id="rodape">
+      </section>
+    </main>
+    <footer>
       <h2>Redes Sociais</h2>
       <ul class="socials">
-        <li>
-          <a href="https://github.com/Danielbsl0"
-            ><img src="img/github-icon.jpeg" alt="GitHub" />Danielbsl0</a
-          >
-        </li>
-        <li>
-          <a href="https://www.instagram.com/o_dani3l"
-            ><img src="img/instagram-icon.jpeg" alt="Instagram" />o_dani3l</a
-          >
-        </li>
-        <li>
-          <a href="https://github.com/pwellinsson"
-            ><img src="img/github-icon.jpeg" alt="GitHub" />pwellinsson</a
-          >
-        </li>
-        <li>
-          <a href="https://www.instagram.com/pedro_wellinsson"
-            ><img src="img/instagram-icon.jpeg" alt="Instagram" />Wellinsson</a
-          >
-        </li>
+        <li><a href="https://github.com/Danielbsl0"><img src="img/github-icon.jpeg" alt="GitHub" />Danielbsl0</a></li>
+        <li><a href="https://www.instagram.com/o_dani3l"><img src="img/instagram-icon.jpeg" alt="Instagram" />o_dani3l</a></li>
+        <li><a href="https://github.com/pwellinsson"><img src="img/github-icon.jpeg" alt="GitHub" />pwellinsson</a></li>
+        <li><a href="https://www.instagram.com/pedro_wellinsson"><img src="img/instagram-icon.jpeg" alt="Instagram" />Wellinsson</a></li>
       </ul>
-    </div>
+    </footer>
+  </body>
 </html>
