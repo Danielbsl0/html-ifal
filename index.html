@@ -63,19 +63,25 @@
         color: black;
       }
 
-      .content > section.active {
-        width: 100%;
-        height: 100%;
-        border: none;
-        background-color: black;
-        /* display: flex;
+      .content {
+        background-color: #101828;
+        display: flex;
         flex-flow: column nowrap;
-        justify-content: flex-start;
-        align-items: center; */
+        justify-content: center;
+        align-items: center;
       }
 
-      /* section#perf_pedro > h2 {
-        font-size: 4vw;
+      .content > section.active {
+        background-color: white;
+        max-width: 600px;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        padding: 2vh 2vw;
+        margin: 0 4px;
+        border-radius: 8px;
+        gap: 2vh;
       }
 
       #perfil-img {
@@ -87,17 +93,16 @@
       }
 
       .descricao {
-        font-size: 2.5vw;
         text-align: justify;
-        text-indent: 2em;
-        line-height: 1.4;
-      } */
+        text-indent: 1em;
+        line-height: 1.3;
+      }
 
-      .content iframe {
+      /* .content iframe {
         width: 100%;
         height: 100%;
         border: none;
-      }
+      } */
 
       footer {
         background: white;
@@ -137,19 +142,30 @@
 
       @media screen and (min-width: 600px) and (max-width: 849px) {
         body {
+          background-color: pink;
           font-size: 1em;
         }
       }
 
       @media screen and (min-width: 850px) and (max-width: 1199px) {
         body {
+          background-color: red;
           font-size: 1.2em;
+        }
+
+        .content > section.active {
+          max-width: 700px;
         }
       }
 
       @media screen and (min-width: 1200px) {
         body {
+          background-color: darkorchid;
           font-size: 1.3em;
+        }
+
+        .content > section.active {
+          max-width: 800px;
         }
       }
     </style>
@@ -192,21 +208,82 @@
         </ul>
       </nav>
       <article class="content">
-        <section id="principal" class="active" style="display: none">
-          <iframe src="principal.html" name="principal_iframe"></iframe>
+        <section id="principal" class="active">
+          <!-- <iframe src="principal.html" name="principal_iframe"></iframe> -->
+          <header>
+            <h1>PÁGINA INICIAL</h1>
+            <p>
+              Seja bem vindo a página inicial do nosso site! Aqui você pode
+              acessar os demais conteúdos do nosso site através do menu
+              localizado à esquerda!
+            </p>
+          </header>
+          <h2>O que você verá no nosso site:</h2>
+
+          <main>
+            <div class="perfil">
+              <h3>Perfil do Daniel</h3>
+              <p>Breve resumo sobre o autor do site.</p>
+              <img
+                src="perfil-daniel/img/perfil-daniel.png"
+                alt="Foto do Daniel"
+              />
+            </div>
+            <div class="perfil">
+              <h3>Perfil do Pedro</h3>
+              <p>Breve resumo sobre o autor do site.</p>
+              <img src="perfil-pedro/img/fotoPerfil.jpeg" alt="Foto do Pedro" />
+            </div>
+            <div class="outros">
+              <h3>Devil May Cry</h3>
+              <p>Breve resumo sobre o jogo.</p>
+              <img
+                src="dmc-daniel/img/dmc.jpeg"
+                alt="Imagem de Devil May Cry"
+              />
+            </div>
+            <div class="outros">
+              <h3>Piratas do Caribe</h3>
+              <p>Breve resumo sobre o filme.</p>
+              <img
+                src="pirates_caribbean/img/foto_piratas.jpg"
+                alt="Imagem Piratas do Caribe"
+              />
+            </div>
+          </main>
         </section>
 
         <section id="perf_daniel" class="active" style="display: none">
-          <iframe src="perfil-daniel/perfil.html"></iframe>
+          <h2>Perfil Daniel</h2>
+          <img
+            src="perfil-daniel/img/perfil-daniel.png"
+            alt="Foto do Daniel"
+            height="150"
+            id="perfil-img"
+          />
+          <section class="descricao">
+            <p>
+              Eu sou o Daniel Barbosa Leite Silva, nascido em 5 de novembro de
+              2007, em Arapiraca, Alagoas. Atualmente estou cursando o 3° ano do
+              curso técnico de Informática no IFAL (Instituto Federal de
+              Alagoas), onde estou me aprofundando no universo da tecnologia e
+              da programação, duas áreas pelas quais sou completamente
+              apaixonado.
+            </p>
+            <p>
+              Tenho conhecimento nas áreas em Python, C e C++, além de estar
+              apreendendo as seguintes tenologias de desenvolvimento: HTML, CSS,
+              Javascript e C#
+            </p>
+          </section>
         </section>
 
-        <section id="perf_pedro" class="active">
-          <iframe src="perfil-pedro/perfil_pedro.html" frameborder="0"></iframe>
-          <!-- <h2>Perfil do Pedro</h2>
+        <section id="perf_pedro" class="active" style="display: none">
+          <h2>Perfil do Pedro</h2>
           <img
             id="perfil-img"
             src="perfil-pedro/img/fotoPerfil.jpeg"
-            alt="Foto Pedro"
+            alt="Foto do Pedro"
           />
           <section class="descricao">
             <p>
@@ -218,7 +295,7 @@
               Sou um homem que gosta de aprender coisas novas e programar. Estou
               sempre em busca de novos conhecimentos.
             </p>
-          </section> -->
+          </section>
         </section>
 
         <section id="pirates" class="active" style="display: none">
