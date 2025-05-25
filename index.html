@@ -63,10 +63,35 @@
         color: black;
       }
 
-      .content > section {
+      .content > section.active {
         width: 100%;
         height: 100%;
+        border: none;
+        background-color: black;
+        /* display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center; */
       }
+
+      /* section#perf_pedro > h2 {
+        font-size: 4vw;
+      }
+
+      #perfil-img {
+        width: 30vw;
+        max-width: 150px;
+        height: auto;
+        border-radius: 50%;
+        margin-bottom: 1vh;
+      }
+
+      .descricao {
+        font-size: 2.5vw;
+        text-align: justify;
+        text-indent: 2em;
+        line-height: 1.4;
+      } */
 
       .content iframe {
         width: 100%;
@@ -136,27 +161,71 @@
     <main>
       <nav>
         <ul>
-          <li><button id="principal_button" onclick="switchScreen('main')">Página Principal</button></li>
-          <li><button id="perf_daniel_button" onclick="switchScreen('perf_daniel')">Perfil do Daniel</button></li>
-          <li><button id="perf_pedro_button" onclick="switchScreen('perf_pedro')">Perfil do Pedro</button></li>
-          <li><button id="pirates_button" onclick="switchScreen('pirates')">Piratas do Caribe</button></li>
-          <li><button id="dmc_button" onclick="switchScreen('dmc')">Devil May Cry</button></li>
+          <li>
+            <button id="principal_button" onclick="switchScreen('main')">
+              Página Principal
+            </button>
+          </li>
+          <li>
+            <button
+              id="perf_daniel_button"
+              onclick="switchScreen('perf_daniel')"
+            >
+              Perfil do Daniel
+            </button>
+          </li>
+          <li>
+            <button id="perf_pedro_button" onclick="switchScreen('perf_pedro')">
+              Perfil do Pedro
+            </button>
+          </li>
+          <li>
+            <button id="pirates_button" onclick="switchScreen('pirates')">
+              Piratas do Caribe
+            </button>
+          </li>
+          <li>
+            <button id="dmc_button" onclick="switchScreen('dmc')">
+              Devil May Cry
+            </button>
+          </li>
         </ul>
       </nav>
       <article class="content">
-        <section id="principal">
+        <section id="principal" class="active" style="display: none">
           <iframe src="principal.html" name="principal_iframe"></iframe>
         </section>
-        <section id="perf_daniel" style="display: none;">
+
+        <section id="perf_daniel" class="active" style="display: none">
           <iframe src="perfil-daniel/perfil.html"></iframe>
         </section>
-        <section id="perf_pedro" style="display: none;">
-          <iframe src="perfil-pedro/perfil_pedro.html"></iframe>
+
+        <section id="perf_pedro" class="active">
+          <iframe src="perfil-pedro/perfil_pedro.html" frameborder="0"></iframe>
+          <!-- <h2>Perfil do Pedro</h2>
+          <img
+            id="perfil-img"
+            src="perfil-pedro/img/fotoPerfil.jpeg"
+            alt="Foto Pedro"
+          />
+          <section class="descricao">
+            <p>
+              Aluno do IFAL - Campus Palmeira dos Índios, cursando o 3° ano de
+              Informática. Interessado em desenvolvimento de software,
+              aprendendo HTML5, CSS3 e C# para aplicações web e mobile.
+            </p>
+            <p>
+              Sou um homem que gosta de aprender coisas novas e programar. Estou
+              sempre em busca de novos conhecimentos.
+            </p>
+          </section> -->
         </section>
-        <section id="pirates" style="display: none;">
+
+        <section id="pirates" class="active" style="display: none">
           <iframe src="pirates_caribbean/pirates.html"></iframe>
         </section>
-        <section id="dmc" style="display: none;">
+
+        <section id="dmc" class="active" style="display: none">
           <iframe src="dmc-daniel/dmc.html"></iframe>
         </section>
       </article>
@@ -164,10 +233,26 @@
     <footer>
       <h2>Redes Sociais</h2>
       <ul class="socials">
-        <li><a href="https://github.com/Danielbsl0"><img src="img/github-icon.jpeg" alt="GitHub" />Danielbsl0</a></li>
-        <li><a href="https://www.instagram.com/o_dani3l"><img src="img/instagram-icon.jpeg" alt="Instagram" />o_dani3l</a></li>
-        <li><a href="https://github.com/pwellinsson"><img src="img/github-icon.jpeg" alt="GitHub" />pwellinsson</a></li>
-        <li><a href="https://www.instagram.com/pedro_wellinsson"><img src="img/instagram-icon.jpeg" alt="Instagram" />Wellinsson</a></li>
+        <li>
+          <a href="https://github.com/Danielbsl0"
+            ><img src="img/github-icon.jpeg" alt="GitHub" />Danielbsl0</a
+          >
+        </li>
+        <li>
+          <a href="https://www.instagram.com/o_dani3l"
+            ><img src="img/instagram-icon.jpeg" alt="Instagram" />o_dani3l</a
+          >
+        </li>
+        <li>
+          <a href="https://github.com/pwellinsson"
+            ><img src="img/github-icon.jpeg" alt="GitHub" />pwellinsson</a
+          >
+        </li>
+        <li>
+          <a href="https://www.instagram.com/pedro_wellinsson"
+            ><img src="img/instagram-icon.jpeg" alt="Instagram" />Wellinsson</a
+          >
+        </li>
       </ul>
     </footer>
 

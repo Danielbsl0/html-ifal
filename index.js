@@ -1,19 +1,26 @@
+// document.querySelector("section.active").style.display = "none";
 function switchScreen(id) {
-    document.querySelector("section#principal").style.display = "none";
-    document.querySelector("section#perf_daniel").style.display = "none";
-    document.querySelector("section#perf_pedro").style.display = "none";
-    document.querySelector("section#pirates").style.display = "none";
-    document.querySelector("section#dmc").style.display = "none";
+    let main = document.querySelector("section#principal");
+    let perf_daniel = document.querySelector("section#perf_daniel");
+    let perf_pedro = document.querySelector("section#perf_pedro");
+    let pirates = document.querySelector("section#pirates");
+    let dmc = document.querySelector("section#dmc");
+
+    main.style.display = "none";
+    perf_daniel.style.display = "none";
+    perf_pedro.style.display = "none";
+    pirates.style.display = "none";
+    dmc.style.display = "none";
 
     if (id == "main") {
-        document.querySelector("section#principal").style.display = "block";
+        main.style.display = "flex";
     } else if (id == "perf_daniel") {
-        document.querySelector("section#perf_daniel").style.display = "block";
+        perf_daniel.style.display = "flex";
     } else if (id == "perf_pedro") {
-        document.querySelector("section#perf_pedro").style.display = "block";
+        perf_pedro.style.display = "flex";
     } else if (id == "pirates") {
-        document.querySelector("section#pirates").style.display = "block";
+        pirates.style.display = "flex";
     } else if (id == "dmc") {
-        document.querySelector("section#dmc").style.display = "block";
+        dmc.style.display = "flex";
     } 
 }
