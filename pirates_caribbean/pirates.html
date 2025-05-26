@@ -21,7 +21,7 @@
         align-items: center;
       }
 
-      #conteudo {
+      main {
         display: grid;
         gap: 2vh;
         background-color: white;
@@ -37,18 +37,18 @@
         margin-bottom: 1vh;
       }
 
-      .section {
+      section {
         display: flex;
         flex-flow: column nowrap;
         gap: 1vh;
       }
 
-      .section h2 {
+      section h2 {
         font-size: 1em;
         text-align: left;
       }
 
-      .section p {
+      section p {
         font-size: 0.9em;
         text-align: justify;
         text-indent: 2em;
@@ -75,10 +75,10 @@
         h1 {
           font-size: 2.5vw;
         }
-        .section h2 {
+        section h2 {
           font-size: 2vw;
         }
-        .section p {
+        section p {
           font-size: 1.8vw;
         }
         img#caribe {
@@ -89,9 +89,9 @@
     </style>
   </head>
   <body>
-    <div id="conteudo">
+    <main>
       <h1>Piratas do Caribe</h1>
-      <div class="section">
+      <section>
         <h2>História</h2>
         <p>
           A série se passa em um mundo fictício, e gira em torno das aventuras
@@ -101,8 +101,8 @@
           As histórias são divertidas e emocionantes e são uma ótima forma de
           passar o tempo com amigos.
         </p>
-      </div>
-      <div class="section">
+      </section>
+      <section>
         <h2>Personagens</h2>
         <p>
           Os personagens mais importantes para a trama que a História tem foco
@@ -113,11 +113,12 @@
           <li>Will Turner</li>
           <li>Elizabeth Swann</li>
         </ul>
-      </div>
+      </section>
       <img
         id="caribe"
         src="img/foto_piratas.jpg"
         alt="Imagem Piratas do Caribe"
       />
+    </main>
   </body>
 </html>
