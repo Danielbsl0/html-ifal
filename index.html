@@ -33,7 +33,7 @@
 
       main {
         display: grid;
-        grid-template-columns: 10% 1fr;
+        grid-template-columns: 10vw 90vw;
       }
 
       nav {
@@ -82,6 +82,28 @@
         margin: 0 4px;
         border-radius: 8px;
         gap: 2vh;
+      }
+
+      section#principal {
+        border-radius: 8px;
+        color: white;
+        background-color: rgb(23, 13, 71);
+        height: 100%;
+        width: 90vw;
+      }
+
+      section#principal img {
+        height: 80px;
+      }
+
+      div.perfil > img {
+        border-radius: 50%;
+      }
+
+      section#main_main {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
       }
 
       #perfil-img {
@@ -209,18 +231,17 @@
       </nav>
       <article class="content">
         <section id="principal" class="active">
-          <!-- <iframe src="principal.html" name="principal_iframe"></iframe> -->
-          <header>
+          <section id="head_main">
             <h1>PÁGINA INICIAL</h1>
             <p>
               Seja bem vindo a página inicial do nosso site! Aqui você pode
               acessar os demais conteúdos do nosso site através do menu
               localizado à esquerda!
             </p>
-          </header>
+          </section>
           <h2>O que você verá no nosso site:</h2>
 
-          <main>
+          <section id="main_main">
             <div class="perfil">
               <h3>Perfil do Daniel</h3>
               <p>Breve resumo sobre o autor do site.</p>
@@ -250,7 +271,7 @@
                 alt="Imagem Piratas do Caribe"
               />
             </div>
-          </main>
+          </section>
         </section>
 
         <section id="perf_daniel" class="active" style="display: none">
