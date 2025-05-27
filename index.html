@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/content/dmc/favicon.ico" type="image/x-icon">
     <title>Perfil</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <style>
@@ -19,33 +20,36 @@
         height: 100vh;
       }
 
-      #dmc{
+      #dmc {
         font-family: Arial, Helvetica, sans-serif;
       }
 
-      #dmc > img{
+      #dmc > img {
         margin-right: 5px;
         margin-bottom: -3px;
       }
-      #dmc > h2{
+      #dmc > h2 {
         color: #0442bf;
       }
-      #dmc > .descricao > h3{
+      #dmc > .descricao > h3 {
         text-align: left;
         text-indent: 1em;
         color: #035aa6;
       }
 
+      header, nav {
+          background-color: darkorchid;
+          color: white;
+      }
+
       header {
-        background: white;
-        border-bottom: 1px solid black;
         display: flex;
         align-items: center;
         justify-content: center;
       }
 
       header h1 {
-        font-size: 1.5em;
+        font-size: 1.7em;
       }
 
       main {
@@ -54,7 +58,6 @@
       }
 
       nav {
-        border-right: 1px solid black;
         padding: 5px 0;
       }
 
@@ -73,11 +76,25 @@
         color: rgb(120, 37, 198);
         font-size: 0.9em;
         text-align: center;
+      }
+
+      nav button {
+        font-size: 0.9em;
+        color: rgb(0, 0, 0);
+        background-color: rgba(103, 33, 138, 0.737);
+        box-shadow: inset rgba(0, 0, 0, 0.151) 2px 2px 10px;
+        padding: 8px;
+        border-radius: 8px;
+        border: none;
         cursor: pointer;
       }
 
-      nav > ul > li:hover {
-        color: black;
+      nav button:hover {
+        font-size: 1em;
+        background-color: rgb(120, 37, 198);
+        font-weight: bold;
+        color: white;
+        transition: 0.4s;
       }
 
       .content {
@@ -102,11 +119,35 @@
       }
 
       section#principal {
+        display: flex;
+        justify-content: space-evenly;
+        max-width: none;
+        height: 98%;
+        padding: 10px;
         border-radius: 8px;
         color: white;
         background-color: rgb(23, 13, 71);
-        height: 100%;
-        width: 90vw;
+        text-align: center;
+      }
+
+      section#principal h2 {
+        font-size: 1.7em;
+        margin-bottom: 20px;
+        margin-top: -25px;
+      }
+
+      section#principal h3 {
+        font-size: 1.5em;
+        text-align: left;
+        width: 100%;
+        margin-bottom: 5px;
+      }
+
+      section#principal > .head_main > p {
+        padding: 5px;
+        text-align: justify;
+        text-indent: 0.8em;
+        line-height: 1.3em;
       }
 
       section#principal img {
@@ -115,11 +156,12 @@
 
       div.perfil > img {
         border-radius: 50%;
+        margin: 10px;
       }
 
       section#main_main {
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: 43vw 43vw;
         grid-template-rows: auto auto;
       }
 
@@ -136,7 +178,7 @@
         text-indent: 1em;
         line-height: 1.3;
       }
-      
+
       ul#pers {
         display: flex;
         flex-flow: row nowrap;
@@ -153,15 +195,8 @@
         margin-top: 2vh;
       }
 
-      /* .content iframe {
-        width: 100%;
-        height: 100%;
-        border: none;
-      } */
-
       footer {
         background: white;
-        border-top: 1px solid black;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -183,7 +218,8 @@
       }
 
       .socials a {
-        font-size: 0.7em;
+        text-decoration: none;
+        font-size: 0.9em;
         text-shadow: rgba(0, 0, 0, 0.238) 2px 2px 5px;
         display: flex;
         align-items: center;
@@ -197,14 +233,12 @@
 
       @media screen and (min-width: 600px) and (max-width: 849px) {
         body {
-          background-color: pink;
           font-size: 1em;
         }
       }
 
       @media screen and (min-width: 850px) and (max-width: 1199px) {
         body {
-          background-color: red;
           font-size: 1.2em;
         }
 
@@ -215,7 +249,6 @@
 
       @media screen and (min-width: 1200px) {
         body {
-          background-color: darkorchid;
           font-size: 1.3em;
         }
 
@@ -265,42 +298,42 @@
       <article class="content">
         <section id="principal" class="active">
           <section id="head_main">
-            <h1>PÁGINA INICIAL</h1>
+            <h2>PÁGINA INICIAL</h2>
             <p>
               Seja bem vindo a página inicial do nosso site! Aqui você pode
               acessar os demais conteúdos do nosso site através do menu
               localizado à esquerda!
             </p>
           </section>
-          <h2>O que você verá no nosso site:</h2>
+          <h3>O que você verá no nosso site:</h3>
 
           <section id="main_main">
             <div class="perfil">
-              <h3>Perfil do Daniel</h3>
+              <h4>Perfil do Daniel</h4>
               <p>Breve resumo sobre o autor do site.</p>
               <img
-                src="perfil-daniel/img/perfil-daniel.png"
+                src="img/perfil/daniel/perfil-daniel.png"
                 alt="Foto do Daniel"
               />
             </div>
             <div class="perfil">
-              <h3>Perfil do Pedro</h3>
+              <h4>Perfil do Pedro</h4>
               <p>Breve resumo sobre o autor do site.</p>
-              <img src="perfil-pedro/img/fotoPerfil.jpeg" alt="Foto do Pedro" />
+              <img src="img/perfil/pedro/fotoPerfil.jpeg" alt="Foto do Pedro" />
             </div>
             <div class="outros">
-              <h3>Devil May Cry</h3>
+              <h4>Devil May Cry</h4>
               <p>Breve resumo sobre o jogo.</p>
               <img
-                src="dmc-daniel/img/dmc.jpeg"
+                src="img/content/dmc/dmc.jpeg"
                 alt="Imagem de Devil May Cry"
               />
             </div>
             <div class="outros">
-              <h3>Piratas do Caribe</h3>
+              <h4>Piratas do Caribe</h4>
               <p>Breve resumo sobre o filme.</p>
               <img
-                src="pirates_caribbean/img/foto_piratas.jpg"
+                src="img/content/pirates/foto_piratas.jpg"
                 alt="Imagem Piratas do Caribe"
               />
             </div>
@@ -310,7 +343,7 @@
         <section id="perf_daniel" class="active" style="display: none">
           <h2>Perfil Daniel</h2>
           <img
-            src="perfil-daniel/img/perfil-daniel.png"
+            src="img/perfil/daniel/perfil-daniel.png"
             alt="Foto do Daniel"
             height="150"
             id="perfil-img"
@@ -336,7 +369,7 @@
           <h2>Perfil do Pedro</h2>
           <img
             id="perfil-img"
-            src="perfil-pedro/img/fotoPerfil.jpeg"
+            src="img/perfil/pedro/fotoPerfil.jpeg"
             alt="Foto do Pedro"
           />
           <section class="descricao">
@@ -352,22 +385,22 @@
           </section>
         </section>
 
-        <section id="pirates" class="active" style="display: none;">
+        <section id="pirates" class="active" style="display: none">
           <h1>Piratas do Caribe</h1>
           <h2>História</h2>
           <section class="descricao">
             <p>
-              A série se passa em um mundo fictício, e gira em torno das aventuras
-              do Capitão Jack Sparrow.
+              A série se passa em um mundo fictício, e gira em torno das
+              aventuras do Capitão Jack Sparrow.
             </p>
             <p>
-              As histórias são divertidas e emocionantes e são uma ótima forma de
-              passar o tempo com amigos.
+              As histórias são divertidas e emocionantes e são uma ótima forma
+              de passar o tempo com amigos.
             </p>
             <h2>Personagens</h2>
             <p>
-              Os personagens mais importantes para a trama que a História tem foco
-              são:
+              Os personagens mais importantes para a trama que a História tem
+              foco são:
             </p>
           </section>
           <ul id="pers">
@@ -375,22 +408,35 @@
             <li>Will Turner</li>
             <li>Elizabeth Swann</li>
           </ul>
-        <img
-          id="caribe"
-          src="pirates_caribbean/img/foto_piratas.jpg"
-          alt="Imagem Piratas do Caribe"
-        />
+          <img
+            id="caribe"
+            src="img/content/pirates/foto_piratas.jpg"
+            alt="Imagem Piratas do Caribe"
+          />
         </section>
-        <section id="dmc" class="active" style="display: none;">
+        <section id="dmc" class="active" style="display: none">
           <h2>Devil May Cry: Uma introdução a franquia</h2>
-          <img src="dmc-daniel/img/dmc.jpeg" alt="" height="128">
+          <img src="img/content/dmc/dmc.jpeg" alt="Imagem de Devil May Cry" height="128" />
           <section class="descricao">
-                <h3>A História</h3>
-                <p>Dona de um dos títulos mais aclamados do PS2 (Devil May Cry 3) e sendo umas maiores franquias da Capcom, Devil May Cry conta a história do caçador de demônios: Dante, filho do lendário demônio Sparda (responsável por selar a barreira entre o mundo humano e demoníaco) e de uma humana chamada Eva. Dante tenta salvar o mundo dos demônios, ao contrário de seu irmão Vergil que é obcecado pelo poder e abraçou seu lado demoníaco.</p>
-                <h3>Por onde começar</h3>
-                <p>Num geral, qualquer jogo da franquia pode ser o primeiro, pois muitos seguem uma história que tem início meio e fim no próprio game. Os mais recomendados para se iniciar são: Devil May Cry (o primeiro a ser lançado) e o Devil May Cry 3 por ser o 1° cronologicamente.</p>
+            <h3>A História</h3>
+            <p>
+              Dona de um dos títulos mais aclamados do PS2 (Devil May Cry 3) e
+              sendo umas maiores franquias da Capcom, Devil May Cry conta a
+              história do caçador de demônios: Dante, filho do lendário demônio
+              Sparda (responsável por selar a barreira entre o mundo humano e
+              demoníaco) e de uma humana chamada Eva. Dante tenta salvar o mundo
+              dos demônios, ao contrário de seu irmão Vergil que é obcecado pelo
+              poder e abraçou seu lado demoníaco.
+            </p>
+            <h3>Por onde começar</h3>
+            <p>
+              Num geral, qualquer jogo da franquia pode ser o primeiro, pois
+              muitos seguem uma história que tem início meio e fim no próprio
+              game. Os mais recomendados para se iniciar são: Devil May Cry (o
+              primeiro a ser lançado) e o Devil May Cry 3 por ser o 1°
+              cronologicamente.
+            </p>
           </section>
-                
         </section>
       </article>
     </main>
@@ -399,22 +445,22 @@
       <ul class="socials">
         <li>
           <a href="https://github.com/Danielbsl0"
-            ><img src="img/github-icon.jpeg" alt="GitHub" />Danielbsl0</a
+            ><img src="img/social/github-icon.jpeg" alt="GitHub" />Danielbsl0</a
           >
         </li>
         <li>
           <a href="https://www.instagram.com/o_dani3l"
-            ><img src="img/instagram-icon.jpeg" alt="Instagram" />o_dani3l</a
+            ><img src="img/social/instagram-icon.jpeg" alt="Instagram" />o_dani3l</a
           >
         </li>
         <li>
           <a href="https://github.com/pwellinsson"
-            ><img src="img/github-icon.jpeg" alt="GitHub" />pwellinsson</a
+            ><img src="img/social/github-icon.jpeg" alt="GitHub" />pwellinsson</a
           >
         </li>
         <li>
           <a href="https://www.instagram.com/pedro_wellinsson"
-            ><img src="img/instagram-icon.jpeg" alt="Instagram" />Wellinsson</a
+            ><img src="img/social/instagram-icon.jpeg" alt="Instagram" />Wellinsson</a
           >
         </li>
       </ul>
